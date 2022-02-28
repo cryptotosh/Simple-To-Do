@@ -4,6 +4,7 @@
 
 body {
     width: 100%;
+    min-height: 100vh;
     margin: 0px;
     font-size: 1.2rem;
     font-family: serif;
@@ -12,8 +13,12 @@ body {
     line-height: 1.4;
     background: linear-gradient( rgba(242, 170, 88, 0.7), rgba(235, 170, 95, 0.7)), url(../img/pic2.jpg);
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: center;
+}
+
+.hide{
+    display: none;
 }
 
 #heading {

@@ -22,17 +22,19 @@ form.addEventListener("submit", (e)=>{
     
     li.appendChild(button);
     listItem.appendChild(li);
-    
-//    var tBox=document.querySelector('.form-control');
-//    tBox.innerHTML="";
-//    tBox.setAttribute('placeholder', "");
+ 
     var del=document.getElementById('addAlert');
     del.style.display="";
 
     del.innerHTML="Item added successfully!";
     del.style.color='rgb(0, 128, 0)';
     del.style.borderColor='rgb(0, 128, 0)';
-
+    
+    //to remove alert
+    setTimeout(()=>{
+      return del.className ='hide';
+    }, 500);
+    del.classList.remove('hide');
 })
 
 
@@ -42,6 +44,12 @@ listItem.addEventListener("click", (e)=>{
         del.innerHTML="Item deleted successfully!";
         del.style.color='rgb(255, 0, 0)';
         del.style.borderColor='rgb(255, 0, 0)';
+        
+        //to remove alert
+        setTimeout(()=>{
+          return del.className ='hide';
+        }, 500);
+        del.classList.remove('hide');
         
     var li=e.target.parentElement;
     listItem.removeChild(li);
