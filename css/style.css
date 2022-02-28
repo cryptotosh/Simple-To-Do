@@ -17,6 +17,11 @@ body {
     background-position: center;
 }
 
+/*hide*/
+.hide{
+  display:none;
+}
+
 #heading {
 	font-family: monospace;
     text-align: center;
