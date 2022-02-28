@@ -32,7 +32,11 @@ form.addEventListener("submit", (e)=>{
     del.innerHTML="Item added successfully!";
     del.style.color='rgb(0, 128, 0)';
     del.style.borderColor='rgb(0, 128, 0)';
-
+    //to remove alert
+    setTimeout(()=>{
+      return del.className ='hide';
+    }, 2000);
+    del.classList.remove('hide');
 })
 
 
