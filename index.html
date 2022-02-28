@@ -5,28 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <title>To-Do-List</title>
-
+        <link rel="icon" href="img/icon.ico">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="wrapper">
-            <div id="container" class="container">
-                <form id="addForm">
-                    <h4 id="heading">Simple To-do List</h4>
-                    <p id="addAlert" class="alartAdd" style="display: none">Item added successfully!</p>
-                    <div class="form-group">
-                        <input type="text" id="newItems" class="form-control" placeholder="Enter new items" required>
-                        <button type="submit" class="btn-primary" id="submit" onclick="showItems()">Submit</button>
-                    </div>
-                </form>
-                <div class="newItemsAdd" id="itemsAdd" >
-    <!--                <p id="delAlert" class="alartAdd" style="display: none" >Item deleted successfully!</p>-->
-                    <ul class="list-group" id="list">
-                        <li class="list-group-item" style="display: none"><button id="btn-danger" class="btn-danger">X</button></li>
-                    </ul>
+        <div id="container" class="container">
+            <form id="addForm">
+                <h4 id="heading">Simple To-do List</h4>
+                <p id="addAlert" class="alartAdd" style="display: none">Item added successfully!</p>
+                <div class="form-group">
+                    <input type="text" id="newItems" class="form-control" placeholder="Enter new items" required>
+                    <button type="submit" class="btn-primary" id="submit" onclick="showItems()">Submit</button>
                 </div>
-                <div class="container"></div>
+            </form>
+            <div class="newItemsAdd" id="itemsAdd" >
+<!--                <p id="delAlert" class="alartAdd" style="display: none" >Item deleted successfully!</p>-->
+                <ul class="list-group" id="list">
+                    <li class="list-group-item" style="display: none"><button id="btn-danger" class="btn-danger">X</button></li>
+                </ul>
             </div>
+            <div class="container"></div>
         </div>
         <script src="js/script.js"></script>
     </body>
