@@ -97,14 +97,14 @@ button {
 
 #submit {
     width: 5rem;
-    color: #fff;
+    color: #000;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border: none;
     padding: 4.5px 10px;
     margin: 10px 11rem;
     height: 2.3rem;
-    transition: visibility 0s, opacity 0.5s linear;
+    /* transition: visibility 0s, opacity 0.5s linear; */
     background: rgba(203, 150, 80, 0.82);
     transition: all 0.5s;
 }
