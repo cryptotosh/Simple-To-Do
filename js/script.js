@@ -50,6 +50,9 @@ form.addEventListener("submit", (e)=>{
 listItem.addEventListener("click", (e)=>{
    const del=document.getElementById('addAlert');
     if(e.target.classList.contains("btn-danger")){
+    if(confirm('Deleted record cannot be retrieved, sure to proceed?')){
+            e.target.parentElement.parentElement.remove();
+
         del.innerHTML="Item deleted successfully!";
         del.style.color='rgb(255, 0, 0)';
         del.style.borderColor='rgb(255, 0, 0)';
@@ -62,6 +65,6 @@ listItem.addEventListener("click", (e)=>{
         
     const li=e.target.parentElement;
     listItem.removeChild(li);
-
+       }
     }
 });
