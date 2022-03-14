@@ -8,8 +8,7 @@ const form=document.getElementById("addForm");
 const listItem=document.getElementById("list");
 //var para=document.querySelector('#addAlert');
 
-form.addEventListener("submit", (e)=>{
-    e.preventDefault();
+function createList (){
     const newItems=document.getElementById("newItems");
     const li=document.createElement("li");
     li.className="list-group-item";
@@ -24,7 +23,15 @@ form.addEventListener("submit", (e)=>{
     li.appendChild(button);
     listItem.appendChild(li);
     // newItems.value="";
- 
+}
+
+
+//To create new To-do list
+form.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    createList();
+    
+    //To display Alert
     const del=document.getElementById('addAlert');
     del.style.display="";
 
@@ -37,9 +44,9 @@ form.addEventListener("submit", (e)=>{
       return del.className ='hide';
     }, 700);
     del.classList.remove('hide');
-})
+});
 
-
+//Delete to-do list
 listItem.addEventListener("click", (e)=>{
    const del=document.getElementById('addAlert');
     if(e.target.classList.contains("btn-danger")){
