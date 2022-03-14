@@ -23,13 +23,7 @@ function createList(){
     li.appendChild(button);
     listItem.appendChild(li);
     // newItems.value="";
- 
-    const del=document.getElementById('addAlert');
-    del.style.display="";
-
-    del.innerHTML="Item added successfully!";
-    del.style.color='rgb(0, 128, 0)';
-    del.style.borderColor='rgb(0, 128, 0)';
+    e.target.reset;
 }
 
 
@@ -37,6 +31,14 @@ form.addEventListener("submit", (e)=>{
     e.preventDefault();
     createList();
     
+
+    const del=document.getElementById('addAlert');
+    del.style.display="";
+
+    del.innerHTML="Item added successfully!";
+    del.style.color='rgb(0, 128, 0)';
+    del.style.borderColor='rgb(0, 128, 0)';
+
     //to remove alert
     setTimeout(()=>{
       return del.className ='hide';
