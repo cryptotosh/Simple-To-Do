@@ -1,15 +1,16 @@
-const form=document.getElementById("addForm");
-const listItem=document.getElementById("list");
-//var para=document.querySelector('#addAlert');
-
-
-
 function showItems(){
     document.getElementById("itemsAdd").style.display="";
 }
 
-function createList(){
-	const newItems=document.getElementById("newItems");
+
+
+const form=document.getElementById("addForm");
+const listItem=document.getElementById("list");
+//var para=document.querySelector('#addAlert');
+
+form.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const newItems=document.getElementById("newItems");
     const li=document.createElement("li");
     li.className="list-group-item";
     li.innerHTML=newItems.value;
@@ -23,28 +24,20 @@ function createList(){
     li.appendChild(button);
     listItem.appendChild(li);
     // newItems.value="";
-    e.target.reset;
-}
-
-
-form.addEventListener("submit", (e)=>{
-    e.preventDefault();
-    createList();
-    
-
+ 
     const del=document.getElementById('addAlert');
     del.style.display="";
 
     del.innerHTML="Item added successfully!";
     del.style.color='rgb(0, 128, 0)';
     del.style.borderColor='rgb(0, 128, 0)';
-
+    
     //to remove alert
     setTimeout(()=>{
       return del.className ='hide';
     }, 700);
     del.classList.remove('hide');
-});
+})
 
 
 listItem.addEventListener("click", (e)=>{
